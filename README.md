@@ -28,3 +28,12 @@
 
         untuk publish confignya:
         php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="config"
+
+## using middleware laravel dari spatie
+
+        https://docs.spatie.be/laravel-permission/v3/basic-usage/middleware/
+        tempel kode dibawah ini ke  folder Http/Kernel.php dan paste kode di bawah verified
+
+         'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
+            'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+            'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
