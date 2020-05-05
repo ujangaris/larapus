@@ -17,3 +17,14 @@
     -php artisan migrate
      note: jika terjadi error pada saat migrate, file yang error di migrate belakangan
 
+## Install laravel permision dari spatie
+
+    - https://github.com/spatie/laravel-permission
+        https://docs.spatie.be/laravel-permission/v3/installation-laravel/
+        : composer require spatie/laravel-permission
+
+    - lalu publish dengan code berikut pada terminal:
+        php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+
+        untuk publish confignya:
+        php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="config"
