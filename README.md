@@ -37,3 +37,11 @@
          'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
             'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
             'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
+
+## Install laravel debugbar
+
+    composer require barryvdh/laravel-debugbar --dev
+
+## Admin LTE
+
+    untuk Admin LTE menggunakan versi 2
