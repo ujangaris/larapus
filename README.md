@@ -135,3 +135,11 @@
     - menyiapkan contoller:
         php artisan make:controller Admin\\AuthorController 
 --resource    
+
+## Implementasi Dengan Laravel DataTable 
+     php artisan make:controller Admin\\DataController 
+
+     -jika terjadi error lakukan langkah berikut:
+        php artisan vendor:publish --tag=datatables --force 
+        
+        php artisan config:cache
