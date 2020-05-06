@@ -71,3 +71,5 @@
     jika terjadi bug gunakan code dibawah ini:
         php artisan config:cache
         php artisan cache:clear
+
+## Email veryfication dengan mail trap
