@@ -51,4 +51,23 @@
     - composer require laravel/ui
     - php artisan ui bootstrap --auth
 
-    -npm install && npm run dev
+    - npm install && npm run dev
+
+    - php artisan migrate
+
+## Reset passwor menggunakan mail trap
+
+    isikan pada file .env username dan password mailtrapnya contoh:
+        Username:cc8137f676818a
+        Password:4dbea91f13a49b
+    lalu :
+        APP_URL=http://larapus.test/ #jika menggunakan laragon
+        APP_URL=http://localhost:8000 # jika menggunakan artisan serve saja
+
+        MAIL_FROM_ADDRESS="admin@perpus.com"
+        MAIL_FROM_NAME="${APP_NAME}"
+
+
+    jika terjadi bug gunakan code dibawah ini:
+        php artisan config:cache
+        php artisan cache:clear
