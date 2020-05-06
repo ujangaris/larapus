@@ -101,3 +101,10 @@
 ## Membuat data buku
     - menambah fild quantity pada buku
         php artisan make:migration add_qty_on_books_table --table=books
+         yang diatas jgn lupa di migrate
+    
+    - membuat model book beserta faktorynya
+        php artisan make:model Book -f
+
+        php artisan tinker
+            factory(App\Book::class, 50)->create();
