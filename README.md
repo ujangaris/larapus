@@ -106,6 +106,8 @@
     - membuat model book beserta faktorynya
         php artisan make:model Book -f
 
+        https://picsum.photos/
+        
         php artisan tinker
             factory(App\Book::class, 50)->create();
 
@@ -124,3 +126,10 @@
 
         lalu jalan kan perintah berikut:
             php artisan migrate:fresh --seed
+
+## Menyiapkan table data penulis
+    https://github.com/yajra/laravel-datatables
+
+    composer require yajra/laravel-datatables-oracle:"~9.0"
+
+        
