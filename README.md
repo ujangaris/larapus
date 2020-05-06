@@ -108,3 +108,19 @@
 
         php artisan tinker
             factory(App\Book::class, 50)->create();
+
+## Menyingkat generate data
+    - buat seeder author
+        php artisan make:seeder AuthorsTableSeeder
+    - buat seeder Books
+        php artisan make:seeder BooksTableSeeder
+
+        selanjutnya:
+    - buat kosong dataya dengan :
+        php artisan migrate:fresh
+    
+    -untuk menghindari error dengan printah berikut:
+        composer dump-autoload
+
+        lalu jalan kan perintah berikut:
+            php artisan migrate:fresh --seed
