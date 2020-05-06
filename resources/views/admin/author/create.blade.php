@@ -7,7 +7,7 @@
             <h3 class="box-title">Tambah Data Penulis</h3>
         </div>
         <div class="box-body">
-            <form action="#" method="post">
+            <form action="{{ route('admin.author.store') }}" method="post">
                 @csrf
 
                 <div class="form-group">
