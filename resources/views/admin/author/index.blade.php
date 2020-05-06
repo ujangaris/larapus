@@ -12,6 +12,7 @@
                     <tr>
                       <th>Id</th>
                       <th>Nama</th>
+                      <th>Aksi</th>
                     </tr>
                 </thead>
 
@@ -30,6 +31,7 @@
                 columns:[
                     {data:'DT_RowIndex', orderable:false, searchable:false},
                     {data:'name'},
+                    {data:'action'}
                 ]
             });
         });

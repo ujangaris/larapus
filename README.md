@@ -141,5 +141,12 @@
 
      -jika terjadi error lakukan langkah berikut:
         php artisan vendor:publish --tag=datatables --force 
-        
+
         php artisan config:cache
+
+## Membuat funsi edit penulis
+    - sumber refrensi:
+        https://yajrabox.com/docs/laravel-datatables/master/index-column
+    - gunakan add collumn with closure :
+        https://yajrabox.com/docs/laravel-datatables/master/add-column
+

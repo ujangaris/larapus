@@ -10,7 +10,11 @@ class DataController extends Controller
 {
     public function authors()
     {
-        return datatables()->of(Author::orderBy('name', 'ASC'))
+        $authors = Author::orderBy('name', 'ASC');
+        return datatables()->of($authors)
+            ->addColumn('action', function (Author $author) {
+                return '<a href="' . route('admin.author.edit', $author) . '" class="btn btn-warning">Edit</a>';
+            })
             ->addIndexColumn()
             ->toJson();
     }
