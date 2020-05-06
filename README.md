@@ -45,3 +45,10 @@
 ## Admin LTE
 
     untuk Admin LTE menggunakan versi 2
+
+## Laravel ui Auth
+
+    - composer require laravel/ui
+    - php artisan ui bootstrap --auth
+
+    -npm install && npm run dev
