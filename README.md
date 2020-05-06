@@ -97,3 +97,7 @@
 
         php artisan tinker
             factory(App\Author::class, 10)->create();
+
+## Membuat data buku
+    - menambah fild quantity pada buku
+        php artisan make:migration add_qty_on_books_table --table=books
