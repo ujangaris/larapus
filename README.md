@@ -80,3 +80,8 @@
 
     - php artisan make:seeder RolesTableSeeder
     - php artisan db:seed
+
+## Memberikan role untuk Admin
+
+    - php artisan make:seeder AdminUserSeeder
+    - php artisan db:seed --class=AdminUserSeeder
