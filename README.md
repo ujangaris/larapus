@@ -132,4 +132,6 @@
 
     composer require yajra/laravel-datatables-oracle:"~9.0"
 
-        
+    - menyiapkan contoller:
+        php artisan make:controller Admin\\AuthorController 
+--resource    
