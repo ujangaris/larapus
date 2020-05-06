@@ -85,3 +85,15 @@
 
     - php artisan make:seeder AdminUserSeeder
     - php artisan db:seed --class=AdminUserSeeder
+
+## Membuat halaman admin
+    - php artisan make:controller Admin\\HomeController
+
+## Membuat data author
+    - membuat data dummy penulis 
+        php artisan make:factory AuthorFactory --model=author
+
+        php artisan make:model Author
+
+        php artisan tinker
+            factory(App\Author::class, 10)->create();
