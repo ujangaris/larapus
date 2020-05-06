@@ -73,3 +73,10 @@
         php artisan cache:clear
 
 ## Email veryfication dengan mail trap
+
+    -
+
+## Memberikan role untuk user
+
+    - php artisan make:seeder RolesTableSeeder
+    - php artisan db:seed
