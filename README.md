@@ -150,3 +150,9 @@
     - gunakan add collumn with closure :
         https://yajrabox.com/docs/laravel-datatables/master/add-column
 
+
+## Membuat funsi hapus penulis
+    - sumber refrensi:
+        
+        - gunakan add collumn with view :
+            https://yajrabox.com/docs/laravel-datatables/master/add-colu

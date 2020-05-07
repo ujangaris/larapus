@@ -24,6 +24,12 @@
             </table>
         </div>
     </div>
+    {{-- form hapus --}}
+    <form action="" method="post" id="deleteForm">
+        @csrf
+        @method("DELETE")
+        <input type="submit" value="Hapus" style="display: none">
+    </form>
 @endsection
 
 @push('scripts')
