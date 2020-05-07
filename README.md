@@ -156,3 +156,7 @@
         
         - gunakan add collumn with view :
             https://yajrabox.com/docs/laravel-datatables/master/add-colu
+
+## Menambahkan user experience
+    - menggunakan sweet alert:
+        https://sweetalert2.github.io/#download
