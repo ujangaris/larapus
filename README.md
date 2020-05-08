@@ -167,3 +167,10 @@
         https://mdbootstrap.com/docs/jquery/javascript/notifications/
         atau 
         https://github.com/mouse0270/bootstrap-notify/blob/master/bootstrap-notify.min.js
+
+## laravel-breadcrumbs
+    https://github.com/davejamesmiller/laravel-breadcrumbs
+       1. install package : composer require davejamesmiller/laravel-breadcrumbs:5.x
+       2. Create a file called routes/breadcrumbs
+       3. Choose a template :
+            php artisan vendor:publish --tag=breadcrumbs-config
