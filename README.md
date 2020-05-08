@@ -158,5 +158,12 @@
             https://yajrabox.com/docs/laravel-datatables/master/add-colu
 
 ## Menambahkan user experience
+
     - menggunakan sweet alert:
         https://sweetalert2.github.io/#download
+
+## Menambahkan Bootstrap notify
+    - untuk linknya: 
+        https://mdbootstrap.com/docs/jquery/javascript/notifications/
+        atau 
+        https://github.com/mouse0270/bootstrap-notify/blob/master/bootstrap-notify.min.js
