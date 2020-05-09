@@ -6,24 +6,24 @@
         <p class="flow-text">Koleksi buku yang bisa kamu baca dan kamu pinjam!</p>
     </blockquote>
     <div class="row">
-        @for($i = 0; $i < 10; $i++)
-
+        @foreach($books as $book)
         <div class="col s12 m6">
             <div class="card horizontal hoverable">
                 <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
+                <img src="{{ $book->getCover() }}" height="200px">
                 </div>
                 <div class="card-stacked">
                 <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.</p>
+                    <h6>{{ Str::limit($book->title, 20) }}</h6>
+                    <p>{{ Str::limit($book->description, 50) }}</p>
                 </div>
                 <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="#">Pinjam Buku</a>
                 </div>
                 </div>
             </div>
         </div>
-        @endfor
+        @endforeach
     </div>
     <ul class="pagination center">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>

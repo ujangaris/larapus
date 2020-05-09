@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Book;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,9 @@ class BookController extends Controller
 {
     public function index()
     {
-        return view('frontend.book.index');
+        $books = Book::get();
+        return view('frontend.book.index', [
+            'books' => $books,
+        ]);
     }
 }
