@@ -14,7 +14,9 @@
                 </div>
                 <div class="card-stacked">
                 <div class="card-content">
-                    <h6>{{ Str::limit($book->title, 20) }}</h6>
+                    <h6>
+                        <a href="{{ route('book.show', $book) }}">{{ Str::limit($book->title, 20) }}</a>
+                    </h6>
                     <p>{{ Str::limit($book->description, 50) }}</p>
                 </div>
                 <div class="card-action">
