@@ -30,6 +30,12 @@
     </form>
 @endsection
 
+{{-- dataTable --}}
+@push('style')
+    <link rel="stylesheet" href="{{ asset('assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+
+@endpush
+
 @push('scripts')
 <script src="{{ asset('assets/plugins/bootstrap-notify.min.js') }}"></script>
             @include('admin.templates.partials.alerts')
