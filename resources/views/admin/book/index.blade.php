@@ -14,7 +14,10 @@
                 <thead>
                     <tr>
                       <th>Id</th>
-                      <th>Nama</th>
+                      <th>Judul</th>
+                      <th>Deskripsi</th>
+                      <th>Penulis</th>
+                      <th>Cover</th>
                       <th>Aksi</th>
                     </tr>
                 </thead>
@@ -39,11 +42,14 @@
             $('#dataTable').DataTable({
                 processing:true,
                 serverSide:true,
-                ajax:'{{ route('admin.author.data') }}',
+                ajax:'{{ route('admin.book.data') }}',
                 columns:[
                     {data:'DT_RowIndex', orderable:false, searchable:false},
-                    {data:'name'},
-                    {data:'action'}
+                    {data:'title'},
+                    {data:'description'},
+                    {data:'author'},
+                    {data:'cover'},
+                    {data:'action'},
                 ]
             });
         });
