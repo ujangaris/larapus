@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-group @error('author_id') has-error @enderror">
                     <label for="nama">Penulis</label>
-                    <select name="author_id" class="form-control">
+                    <select name="author_id" class="form-control select2">
                         @foreach($authors as $author)
                         <option value="{{ $author->id }}">{{ $author->name }}</option>
                         @endforeach
@@ -54,3 +54,14 @@
         </div>
     </div>
 @endsection
+
+@push('select2css')
+    <link rel="stylesheet" href="{{ asset('assets/bower_components/select2/dist/css/select2.min.css') }}">
+@endpush
+
+@push('scripts')
+    <script src="{{ asset('assets/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
+    <script>
+        $('.select2').select2();
+    </script>
+@endpush
