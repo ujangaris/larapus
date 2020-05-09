@@ -174,3 +174,7 @@
        2. Create a file called routes/breadcrumbs
        3. Choose a template :
             php artisan vendor:publish --tag=breadcrumbs-config
+
+## Menampilkan data Books
+    membuat controller books
+        php artisan make:controller Admin\\BookCOntroller --resource
