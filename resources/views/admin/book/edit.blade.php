@@ -4,21 +4,70 @@
 @section('content')
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Edit Data Penulis</h3>
+            <h3 class="box-title">Tambah Data Buku</h3>
         </div>
         <div class="box-body">
-            <form action="{{ route('admin.author.update', $author) }}" method="post">
+            <form action="{{ route('admin.book.update', $book) }}" method="post" enctype="multipart/form-data">
                 @csrf
-                @method('put')
-                <div class="form-group @error('name') has-error @enderror">
-                    <label for="nama">Nama</label>
-                    <input id="nama" placeholder="masukan nama penulis" class="form-control" type="text" name="name" value="{{ old('name') ?? $author->name }}">
-                </div>
-                @error('name')
+
+                <div class="form-group @error('title') has-error @enderror">
+                    <label for="nama">Judul</label>
+                    <input  placeholder="masukan judul buku" class="form-control" type="text" name="title" value="{{ $book->title ?? old('title') }}">
+                    @error('title')
                         <span class="help-block">{{ $message }}</span>
                     @enderror
-                <button type="submit" class="btn btn-primary">Ubah</button>
+                </div>
+                <div class="form-group @error('description') has-error @enderror">
+                    <label for="nama">Deskripsi</label>
+                    <textarea name="description" class="form-control"  rows="3" placeholder="Tuliskan descripsi buku">{{ $book->description ?? old('description') }}</textarea>
+                    @error('description')
+                        <span class="help-block">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="form-group @error('author_id') has-error @enderror">
+                    <label for="nama">Penulis</label>
+                    <select name="author_id" class="form-control select2">
+                        @foreach($authors as $author)
+                        <option value="{{ $author->id }}"
+                             @if($author->id === $book->author_id)
+                                selected
+
+                            @endif >
+                            {{ $author->name }}
+                        </option>
+                        @endforeach
+                    </select>
+                    @error('author_id')
+                        <span class="help-block">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="form-group @error('cover') has-error @enderror">
+                    <label for="nama">Sampul</label>
+                    <input   class="form-control" type="file" name="cover">
+                    @error('cover')
+                        <span class="help-block">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="form-group @error('qty') has-error @enderror">
+                    <label for="nama">Jumlah Buku</label>
+                    <input  placeholder="masukan jumlah buku" class="form-control" type="text" name="qty" value="{{ $book->qty ?? old('name') }}">
+                    @error('qty')
+                        <span class="help-block">{{ $message }}</span>
+                    @enderror
+                </div>
+                <button type="submit" class="btn btn-primary">Tambah</button>
             </form>
         </div>
     </div>
 @endsection
+
+@push('select2css')
+    <link rel="stylesheet" href="{{ asset('assets/bower_components/select2/dist/css/select2.min.css') }}">
+@endpush
+
+@push('scripts')
+    <script src="{{ asset('assets/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
+    <script>
+        $('.select2').select2();
+    </script>
+@endpush

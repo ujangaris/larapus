@@ -85,9 +85,14 @@ class BookCOntroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Book $book)
     {
-        //
+        return view('admin.book.edit', [
+            'title' => 'Ubah data buku',
+            'book' => $book,
+            'authors' => Author::orderBy('name', 'ASC')->get(),
+
+        ]);
     }
 
     /**
