@@ -189,3 +189,6 @@
 
 ## Menggunakan Materialize
     https://materializecss.com/getting-started.html
+
+## Menampilkan data buku dihalaman depan
+    php artisan make:controller Frontend\\BookController
