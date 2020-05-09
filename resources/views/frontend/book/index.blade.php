@@ -5,8 +5,8 @@
     <blockquote>
         <p class="flow-text">Koleksi buku yang bisa kamu baca dan kamu pinjam!</p>
     </blockquote>
-    <div class="row">
-        @foreach($books as $book)
+<div class="row">
+    @foreach($books as $book)
         <div class="col s12 m6">
             <div class="card horizontal hoverable">
                 <div class="card-image">
@@ -23,17 +23,9 @@
                 </div>
             </div>
         </div>
-        @endforeach
-    </div>
+    @endforeach
+</div>
+
     {{-- Pagination --}}
-    {{$books->links()  }}
-    {{-- <ul class="pagination center">
-        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-        <li class="active"><a href="#!">1</a></li>
-        <li class="waves-effect"><a href="#!">2</a></li>
-        <li class="waves-effect"><a href="#!">3</a></li>
-        <li class="waves-effect"><a href="#!">4</a></li>
-        <li class="waves-effect"><a href="#!">5</a></li>
-        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-    </ul> --}}
+    {{$books->links('vendor.pagination.materialize')  }}
 @endsection

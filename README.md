@@ -192,3 +192,7 @@
 
 ## Menampilkan data buku dihalaman depan
     php artisan make:controller Frontend\\BookController
+
+## Custom Pagination
+    php artisan vendor:publish
+        lalu pilih nomor untuk pagination
