@@ -6,6 +6,7 @@ use App\Author;
 use App\Book;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BookCOntroller extends Controller
 {
@@ -102,9 +103,32 @@ class BookCOntroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Book $book)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required|min:20',
+            'author_id' => 'required',
+            'cover' => 'file|image',
+            'qty' => 'required|numeric',
+        ]);
+
+        $cover = $book->cover;
+
+        if ($request->hasFile('cover')) {
+            Storage::delete($book->cover);
+            $cover = $request->file('cover')->store('assets/covers');
+        }
+
+        $book->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'author_id' => $request->author_id,
+            'cover' => $cover,
+            'qty' => $request->qty,
+        ]);
+
+        return redirect()->route('admin.book.index')->withSuccess('Data buku berhasil diperbaharui!');
     }
 
     /**

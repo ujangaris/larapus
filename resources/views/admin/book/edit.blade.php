@@ -9,7 +9,7 @@
         <div class="box-body">
             <form action="{{ route('admin.book.update', $book) }}" method="post" enctype="multipart/form-data">
                 @csrf
-
+                @method('put')
                 <div class="form-group @error('title') has-error @enderror">
                     <label for="nama">Judul</label>
                     <input  placeholder="masukan judul buku" class="form-control" type="text" name="title" value="{{ $book->title ?? old('title') }}">
@@ -55,7 +55,7 @@
                         <span class="help-block">{{ $message }}</span>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
             </form>
         </div>
     </div>
