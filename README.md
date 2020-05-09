@@ -178,3 +178,11 @@
 ## Menampilkan data Books
     membuat controller books
         php artisan make:controller Admin\\BookCOntroller --resource
+
+## Menangani aset gambar
+    php artisan migrate:fresh --seed
+
+    https://placeholder.com/
+        So this URL… https://via.placeholder.com/728x90.png?text=No+Image
+    - jika terjadi error gambar tidak tampil lakukan :
+             php artisan cache:clear php artisan config:clear php artisan view:clear

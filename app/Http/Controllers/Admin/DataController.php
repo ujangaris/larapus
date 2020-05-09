@@ -29,7 +29,7 @@ class DataController extends Controller
             })
 
             ->editColumn('cover', function (Book $model) {
-                return '<img src="' . $model->cover . '" height="150px" >';
+                return '<img src="' . $model->getCover() . '" height="150px" >';
             })
             ->addColumn('action', 'admin.book.action')
             ->addIndexColumn()

@@ -51,6 +51,8 @@ class BookCOntroller extends Controller
             'qty' => 'required|numeric',
         ]);
 
+        $cover = null;
+
         if ($request->hasFile('cover')) {
             $cover = $request->file('cover')->store('assets/covers');
         }
