@@ -23,4 +23,10 @@ class Book extends Model
         }
         return 'https://via.placeholder.com/150x200.png?text=No+Cover';
     }
+
+    //relasi eloquent laravel
+    public function borrowed()
+    {
+        return $this->belongsToMany(User::clas, 'borrow_history');
+    }
 }
