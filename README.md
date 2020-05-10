@@ -196,3 +196,6 @@
 ## Custom Pagination
     php artisan vendor:publish
         lalu pilih nomor untuk pagination
+
+## Fungsi Pinjam Buku
+    php artisan make:model BorrowHistory
