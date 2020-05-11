@@ -4,8 +4,7 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Penulis</h3>
-            <a href="{{ route('admin.author.create') }}" class="btn btn-primary">Tambah Penulis</a>
+            <h3 class="box-title">Data Peminjaman Buku</h3>
         </div>
         <div class="box-body">
 
@@ -24,10 +23,10 @@
         </div>
     </div>
     {{-- form hapus --}}
-    <form action="" method="post" id="deleteForm">
+    <form action="" method="post" id="returnForm">
         @csrf
-        @method("DELETE")
-        <input type="submit" value="Hapus" style="display: none">
+        @method("PUT")
+        <input type="submit" value="Return" style="display: none">
     </form>
 @endsection
 

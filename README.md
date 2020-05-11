@@ -202,3 +202,10 @@
 
 ## Admin daftar buku yang dipinjam
     php artisan make:controller Admin\\BorrowController
+
+## Fungsi pengembalian buku
+    php artisan make:migration add_returned_at_and_receiver_user_id_on_borrow_history_table --table=borrow_history
+
+    lalu jalankan migrationnya:
+        php artisan migrate
+        
