@@ -6,7 +6,7 @@
         @foreach($books as $book)
         <div class="card horizontal hoverable">
             {{-- <div class="card-image"> --}}
-            <img src="{{ $book->getCover() }}">
+            <img src="{{ $book->getCover() }} " width="200px" height="300px">
             {{-- </div> --}}
             <div class="card-stacked">
             <div class="card-content">
