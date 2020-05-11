@@ -49,9 +49,9 @@ class DataController extends Controller
             ->addColumn('book_title', function (BorrowHistory $model) {
                 return $model->book->title;
             })
-            // ->addColumn('action', 'admin.book.action')
+            ->addColumn('action', 'admin.borrow.action')
             ->addIndexColumn()
-            // ->rawColumns(['action'])
+            ->rawColumns(['action'])
             ->toJson();
     }
 }

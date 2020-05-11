@@ -16,6 +16,7 @@
                       <th>Id</th>
                       <th>Nama</th>
                       <th>Judul Buku</th>
+                      <th>Aksi</th>
                     </tr>
                 </thead>
 
@@ -52,6 +53,7 @@
                     {data:'DT_RowIndex', orderable:false, searchable:false},
                     {data:'user'},
                     {data:'book_title'},
+                    {data:'action'},
                 ]
             });
         });
