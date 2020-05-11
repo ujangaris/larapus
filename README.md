@@ -199,3 +199,6 @@
 
 ## Fungsi Pinjam Buku
     php artisan make:model BorrowHistory
+
+## Admin daftar buku yang dipinjam
+    php artisan make:controller Admin\\BorrowController
