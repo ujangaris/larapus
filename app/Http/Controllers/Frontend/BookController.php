@@ -30,6 +30,9 @@ class BookController extends Controller
 
         $user->borrow()->attach($book);
 
+        /* funsi mengurasi jumlah buku */
+        $book->decrement('qty');
+
         return redirect()->back()->with('toast', 'Berhasil meminjam buku!');
     }
 }
