@@ -13,5 +13,6 @@
     </div>
     <!-- Optional JavaScript -->
     @include('frontend.templates.partials.script')
+    @include('frontend.templates.partials.toast')
   </body>
 </html>
