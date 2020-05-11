@@ -22,7 +22,9 @@ class DataController extends Controller
 
     public function books()
     {
-        $books = Book::with('author')->orderBy('title', 'ASC');
+        $books = Book::orderBy('title', 'ASC')->get();
+
+        $books->load('author');
 
         return datatables()->of($books)
             ->addColumn('author', function (Book $model) {
