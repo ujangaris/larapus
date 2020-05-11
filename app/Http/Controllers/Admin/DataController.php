@@ -40,7 +40,7 @@ class DataController extends Controller
 
     public function borrows()
     {
-        $borrows = BorrowHistory::latest();
+        $borrows = BorrowHistory::where('returned_at', null)->latest();
 
         return datatables()->of($borrows)
             ->addColumn('user', function (BorrowHistory $model) {
