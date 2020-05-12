@@ -20,9 +20,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @php
+                        $no =1;
+                    @endphp
                     @foreach($users as $user)
                     <tr>
-                        <td></td>
+                        <td>{{ $no++ }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->borrow_count }}</td>
