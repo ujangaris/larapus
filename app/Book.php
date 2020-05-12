@@ -27,7 +27,14 @@ class Book extends Model
     //relasi eloquent laravel
     public function borrowed()
     {
-        return $this->belongsToMany(User::clas, 'borrow_history')
+        return $this->belongsToMany(User::class, 'borrow_history')
             ->withTimestamps();
+    }
+
+    public function scopeIsStillBorrow($query, $bookId)
+    {
+        return $query->where('books.id', $bookId)
+            ->where('returned_at', null)
+            ->count() > 0;
     }
 }
