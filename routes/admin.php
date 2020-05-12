@@ -12,3 +12,6 @@ Route::resource('book', 'BookCOntroller');
 
 Route::get('borrow', 'BorrowCOntroller@index')->name('borrow.index');
 Route::put('borrow/{borrowHistory}/return', 'BorrowCOntroller@returnBook')->name('borrow.return');
+
+
+Route::get('report/top-book', 'ReportController@topBook')->name('report.top-book');

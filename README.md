@@ -209,3 +209,5 @@
     lalu jalankan migrationnya:
         php artisan migrate
         
+## Membuat halaman laporan buku paling banyak dipinjam
+    php artisan make:controller Admin\\ReportController
