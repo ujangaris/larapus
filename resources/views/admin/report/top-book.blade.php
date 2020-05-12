@@ -12,7 +12,7 @@
             <table id="dataTable" class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                      <th>Id</th>
+                      <th>No</th>
                       <th>Judul</th>
                       <th>Deskripsi</th>
                       <th>Jumlah Buku</th>
@@ -22,17 +22,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($books as $book)
                     <tr>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $book->title }}</td>
+                        <td>{{ $book->description }}</td>
+                        <td>{{ $book->qty }}</td>
+                        <td>{{ $book->borrowed_count }}</td>
+                        <td>{{ $book->author->name }}</td>
+                        <td>
+                            <img src="{{ $book->getCover() }}" height="150px" alt="{{ $book->title }}">
+                        </td>
+
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
+            {{ $books->links() }}
         </div>
     </div>
 
