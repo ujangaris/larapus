@@ -21,7 +21,11 @@
                 </thead>
                 <tbody>
                     @php
-                        $no =1;
+                        $page = 1;
+                        if(request()->has('page')){
+                            $page = request('page');
+                        }
+                        $no = (env('PAGINATION_ADMIN')* $page)-(env('PAGINATION_ADMIN')-1);
                     @endphp
                     @foreach($users as $user)
                     <tr>

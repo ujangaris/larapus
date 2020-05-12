@@ -27,7 +27,7 @@
                         if(request()->has('page')){
                             $page = request('page');
                         }
-                        $no = (10* $page)-(10-1);
+                        $no = (env('PAGINATION_ADMIN')* $page)-(env('PAGINATION_ADMIN')-1);
                     @endphp
                     @foreach($books as $book)
                     <tr>
