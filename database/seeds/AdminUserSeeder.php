@@ -15,7 +15,7 @@ class AdminUserSeeder extends Seeder
         $user = User::create([
             'name' => 'Admin Perpus',
             'email' => 'admin@perpus.mail',
-            'password' => bcrypt('12345678'),
+            'password' => bcrypt('password123'),
             'email_verified_at' => now(),
         ]);
 
