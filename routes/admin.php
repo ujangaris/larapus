@@ -6,12 +6,12 @@ Route::get('/book/data', 'DataController@books')->name('book.data');
 Route::get('/borrow/data', 'DataController@borrows')->name('borrow.data');
 
 //wajib taruh dibawah DataController
-Route::resource('author', 'AuthorCOntroller');
-Route::resource('book', 'BookCOntroller');
+Route::resource('author', 'AuthorController');
+Route::resource('book', 'BookController');
 
 
-Route::get('borrow', 'BorrowCOntroller@index')->name('borrow.index');
-Route::put('borrow/{borrowHistory}/return', 'BorrowCOntroller@returnBook')->name('borrow.return');
+Route::get('borrow', 'BorrowController@index')->name('borrow.index');
+Route::put('borrow/{borrowHistory}/return', 'BorrowController@returnBook')->name('borrow.return');
 
 
 Route::get('report/top-book', 'ReportController@topBook')->name('report.top-book');
